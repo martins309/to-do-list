@@ -1,0 +1,14 @@
+<h1>This is a To Do List</h1>
+<p>${todoData.map (entry =>`
+    
+    <p>${entry.task} ${entry.status}</p>`).join('')}</p>
+<form action="/addtask" method="POST">
+    <input type="hidden" value="1" name="user_id">
+    <label>
+        New Task
+        <input type="text" name="task" placeholder="Add to your todo list">
+        
+
+    </label>
+<button type="submit">Add Task</button>
+</form>
